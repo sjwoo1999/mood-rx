@@ -2,7 +2,7 @@
 import { NextRequest } from 'next/server';
 import { apiError, apiSuccess, ERROR_CODES } from '@/lib/utils/errors';
 import { generateShareToken } from '@/lib/utils/tokens';
-import { isMockMode, getMockRecord, setMockShareToken, MOCK_USER } from '@/lib/mock/data';
+import { isMockMode, getMockRecord, setMockShareToken } from '@/lib/mock/data';
 
 interface RouteParams {
     params: Promise<{ id: string }>;

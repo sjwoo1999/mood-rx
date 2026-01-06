@@ -1,7 +1,7 @@
 // GET, DELETE /api/mood-rx/[id]
 import { NextRequest } from 'next/server';
 import { apiError, apiSuccess, ERROR_CODES } from '@/lib/utils/errors';
-import { isMockMode, getMockRecord, deleteMockRecord, MOCK_USER } from '@/lib/mock/data';
+import { isMockMode, getMockRecord, deleteMockRecord } from '@/lib/mock/data';
 
 interface RouteParams {
     params: Promise<{ id: string }>;

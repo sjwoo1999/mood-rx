@@ -17,8 +17,8 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
             if (!record || record.crisis) {
                 return apiError(ERROR_CODES.NOT_FOUND, '공유된 처방전을 찾을 수 없습니다.', 404);
             }
-            const { crisis: _crisis, situation: _situation, user_id: _userId, ...safeData } = record;
-            return apiSuccess(safeData);
+            const { id, emotion, energy, core_reason, next_action_24h, forbidden_phrase, created_at, prompt_version, card_image_path, share_token } = record;
+            return apiSuccess({ id, emotion, energy, core_reason, next_action_24h, forbidden_phrase, created_at, prompt_version, card_image_path, share_token });
         }
 
         // Production mode

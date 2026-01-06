@@ -1,7 +1,5 @@
 // Mock Supabase client for testing
-import { isMockMode, MOCK_USER } from './data';
-
-type MockUser = typeof MOCK_USER | null;
+import { MOCK_USER } from './data';
 
 let mockLoggedIn = true; // Start logged in for testing
 
@@ -29,8 +27,8 @@ export function getMockAuth() {
             mockLoggedIn = false;
             return { error: null };
         },
-        onAuthStateChange: (callback: (event: string, session: { user: MockUser } | null) => void) => {
-            // Return a mock subscription
+        onAuthStateChange: () => {
+            // Return a mock subscription (callback is intentionally unused in mock)
             return {
                 data: {
                     subscription: {

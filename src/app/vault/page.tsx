@@ -27,7 +27,7 @@ export default function VaultPage() {
                     if (json.ok) {
                         setRecords(json.data);
                     }
-                } catch (err) {
+                } catch {
                     setError('보관함을 불러올 수 없습니다.');
                 } finally {
                     setLoading(false);

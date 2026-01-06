@@ -1,7 +1,6 @@
 // GET /api/og - Generate OG image for prescription card
 import { ImageResponse } from 'next/og';
 import { NextRequest } from 'next/server';
-import { isMockMode, getMockRecord } from '@/lib/mock/data';
 
 export const runtime = 'edge';
 
