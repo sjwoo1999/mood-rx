@@ -3,25 +3,29 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #f9fafb;
   --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Custom utilities */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid #2563EB;
+  outline-offset: 2px;
 }
